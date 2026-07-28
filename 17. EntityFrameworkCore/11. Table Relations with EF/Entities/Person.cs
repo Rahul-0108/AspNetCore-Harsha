@@ -38,6 +38,8 @@ namespace Entities
 
 
     [ForeignKey("CountryID")]
+    // virtual for override by child class
+    // nullable so ? as it will be null if we do not unclude Include method wgile querying in linq
     public virtual Country? Country { get; set; }
   }
 }

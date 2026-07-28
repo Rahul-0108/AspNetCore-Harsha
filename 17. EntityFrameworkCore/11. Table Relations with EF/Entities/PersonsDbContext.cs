@@ -49,7 +49,7 @@ namespace Entities
       modelBuilder.Entity<Person>()
         .HasCheckConstraint("CHK_TIN", "len([TaxIdentificationNumber]) = 8");
 
-      //Table Relations
+      //Table Relations (not required)
       modelBuilder.Entity<Person>(entity =>
       {
         entity.HasOne<Country>(c => c.Country)

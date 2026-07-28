@@ -38,6 +38,8 @@ namespace Entities
 
     public List<Person> sp_GetAllPersons() //
     {
+    // So you can access your DB context that is persons DB context.Because the result set is the rows from the persons table.So it has to be converted into a list of persons.
+    //So that is why we are using persons DB context.
       return Persons.FromSqlRaw("EXECUTE [dbo].[GetAllPersons]").ToList();
     }
   }

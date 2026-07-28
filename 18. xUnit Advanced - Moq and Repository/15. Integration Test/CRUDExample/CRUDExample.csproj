@@ -24,7 +24,7 @@
  </ItemGroup>
 
  <ItemGroup>
-  <InternalsVisibleTo Include="CRUDTests" />
+  <InternalsVisibleTo Include="CRUDTests" /> // make Program class available to tests
  </ItemGroup>
 
 </Project>

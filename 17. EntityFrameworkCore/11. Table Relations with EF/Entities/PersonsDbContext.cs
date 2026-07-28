@@ -56,6 +56,12 @@ namespace Entities
         .WithMany(p => p.Persons)
         .HasForeignKey(p => p.CountryID);
       });
+      // What is the foreign key here? That is, CountryId property of the Person. So this will explicitly configure the foreign key, that is,
+      // the CountryId property in the PersonModel class. But in general, it is not required to explicitly mention the relationship in 
+      // the DbContext. So you can ignore the same. It is not required. It is the common practice that you will configure the same here itself. 
+      // So just above the navigation property, you can write the ForeignKey attribute with CountryId. 
+      // That's it. While creating the navigation property, you can mention the foreign key, and it will take up the relationship automatically. 
+      // It internally applies the joins to load the corresponding related data from the other table.
     }
 
     public List<Person> sp_GetAllPersons()

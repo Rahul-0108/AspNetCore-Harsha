@@ -6,6 +6,7 @@ namespace Entities.Migrations
 {
   public partial class GetPersons_StoredProcedure : Migration
   {
+  //Whenever you run the update database command next time, this up method executes. But in case in future when you want to roll back the migration, then this down method executes.
     protected override void Up(MigrationBuilder migrationBuilder)
     {
       string sp_GetAllPersons = @"

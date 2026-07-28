@@ -7,6 +7,8 @@ namespace Entities.Migrations
 {
     public partial class Initial : Migration
     {
+    // The up script or up method will be executed while creating the database or while making the changes into the existing tables.
+    // So focus on this up method here. That means a set of predefined methods to create the table. To configure the primary key and foreign key. And relations. And many more.
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -70,7 +72,7 @@ namespace Entities.Migrations
                     { new Guid("d15c6d9f-70b4-48c5-afd3-e71261f1a9be"), "83187 Merry Drive", new Guid("12e15727-d369-49a9-8b13-bc22e9362179"), new DateTime(1987, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), "asarvar3@dropbox.com", "Male", "Angie", true }
                 });
         }
-
+// if you roll back the migrations, the down method executes. It revert all changes made in up method above
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
@@ -81,3 +83,4 @@ namespace Entities.Migrations
         }
     }
 }
+// In general, it is not advisable to make direct changes in this migration code. If you want to make any changes, you can make it as another migration.

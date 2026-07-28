@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.InMemory;
 using Microsoft.Extensions.DependencyInjection;
-// override tests
+// override Program class
 namespace CRUDTests
 {
  public class CustomWebApplicationFactory : WebApplicationFactory<Program>

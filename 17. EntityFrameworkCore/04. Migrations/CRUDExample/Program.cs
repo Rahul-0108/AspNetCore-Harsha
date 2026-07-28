@@ -11,6 +11,7 @@ builder.Services.AddSingleton<ICountriesService, CountriesService>();
 builder.Services.AddSingleton<IPersonsService, PersonsService>();
 
 builder.Services.AddDbContext<PersonsDbContext>(options => {
+  // shorthand for configuration?.GetSection("ConnectionStrings")[name];
   options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 

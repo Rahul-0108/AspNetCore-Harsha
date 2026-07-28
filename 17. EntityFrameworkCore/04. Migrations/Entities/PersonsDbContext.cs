@@ -13,11 +13,13 @@ namespace Entities
     public DbSet<Country> Countries { get; set; }
     public DbSet<Person> Persons { get; set; }
 
+// Here we have the predefined object called ModelBuilder. You can configure the tables and corresponding indexes or primary keys or relations
+//or any seed data. Everything can be configured by using the same ModelBuilder object.
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
       base.OnModelCreating(modelBuilder);
 
-      modelBuilder.Entity<Country>().ToTable("Countries");
+      modelBuilder.Entity<Country>().ToTable("Countries"); // map to table
       modelBuilder.Entity<Person>().ToTable("Persons");
 
       //Seed to Countries

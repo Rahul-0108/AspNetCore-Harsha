@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
-
+##################Ignore
 namespace Entities.Migrations
 {
     [DbContext(typeof(PersonsDbContext))]

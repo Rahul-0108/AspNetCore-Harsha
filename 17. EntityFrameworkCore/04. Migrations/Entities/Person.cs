@@ -8,9 +8,10 @@ namespace Entities
   /// </summary>
   public class Person
   {
-    [Key]
+    [Key] // primary key
     public Guid PersonID { get; set; }
 
+    // if non nullable then initialize with ""
     [StringLength(40)] //nvarchar(40)
     public string? PersonName { get; set; }
 
@@ -28,7 +29,7 @@ namespace Entities
     [StringLength(200)] //nvarchar(200)
     public string? Address { get; set; }
 
-    //bit
+    //bit // 0 or 1
     public bool ReceiveNewsLetters { get; set; }
   }
 }

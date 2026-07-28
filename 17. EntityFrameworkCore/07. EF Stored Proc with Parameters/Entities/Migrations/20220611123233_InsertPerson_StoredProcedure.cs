@@ -7,7 +7,7 @@ namespace Entities.Migrations
   public partial class InsertPerson_StoredProcedure : Migration
   {
     protected override void Up(MigrationBuilder migrationBuilder)
-    {
+    {// written manually
       string sp_InsertPerson = @"
         CREATE PROCEDURE [dbo].[InsertPerson]
         (@PersonID uniqueidentifier, @PersonName nvarchar(40), @Email nvarchar(50), @DateOfBirth datetime2(7), @Gender varchar(10), @CountryID uniqueidentifier, @Address nvarchar(1000), @ReceiveNewsLetters bit)

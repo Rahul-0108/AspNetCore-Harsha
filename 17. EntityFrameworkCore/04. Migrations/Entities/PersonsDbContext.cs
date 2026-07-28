@@ -26,6 +26,7 @@ namespace Entities
       string countriesJson = System.IO.File.ReadAllText("countries.json");
       List<Country> countries = System.Text.Json.JsonSerializer.Deserialize<List<Country>>(countriesJson);
 
+ // These are the initial rows of the table that gets added to the table only when it is created, not after that. But it will not be reinserted if you delete.
       foreach (Country country in countries)
         modelBuilder.Entity<Country>().HasData(country);
 

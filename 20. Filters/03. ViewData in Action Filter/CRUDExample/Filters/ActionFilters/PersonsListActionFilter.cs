@@ -26,7 +26,7 @@ namespace CRUDExample.Filters.ActionFilters
    {
     if (parameters.ContainsKey("searchBy"))
     {
-     personsController.ViewData["CurrentSearchBy"] = Convert.ToString(parameters["searchBy"]);
+     personsController.ViewData["CurrentSearchBy"] = Convert.ToString(parameters["searchBy"]); // set viewdata value for frontend
     }
 
     if (parameters.ContainsKey("searchString"))
@@ -59,7 +59,7 @@ namespace CRUDExample.Filters.ActionFilters
 
 
   public void OnActionExecuting(ActionExecutingContext context)
-  {
+  { // set arguments in HttpContext so it can be read from anywhere
    context.HttpContext.Items["arguments"] = context.ActionArguments;
 
    //To do: add before logic here

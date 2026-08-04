@@ -30,7 +30,7 @@ namespace CRUDExample.Filters.ActionFilters
      personsController.ViewBag.Errors = personsController.ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
 
      var personRequest = context.ActionArguments["personRequest"];
-
+// pass model to the view, see its similar to controller acion
      context.Result = personsController.View(personRequest); //short-circuits or skips the subsequent action filters & action method
     }
     else

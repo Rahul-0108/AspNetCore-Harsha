@@ -9,6 +9,7 @@ using ServiceContracts.Enums;
 namespace CRUDExample.Controllers
 {
  [Route("[controller]")]
+ // still we need to  pass Order property to TypeFilter
  [TypeFilter(typeof(ResponseHeaderActionFilter), Arguments = new object[] { "My-Key-From-Controller", "My-Value-From-Controller", 3 }, Order = 3)]
  public class PersonsController : Controller
  {
